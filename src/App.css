@@ -1,0 +1,70 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+
+form {
+  margin-bottom: 2em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: left;
+}
+
+form div {
+  margin-bottom: 0.5em;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+form input[type="text"],
+form input[type="date"],
+form textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+form button {
+  padding: 0.7em 1.5em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+div > h2 { /* For JournalList h2 */
+  margin-top: 1em;
+}
+
+div > div > h3 { /* For JournalItem h3 */
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+div > div > p { /* For JournalItem p */
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+div > div > small { /* For JournalItem small (date) */
+  font-style: italic;
+  color: #555;
+}
