@@ -14,7 +14,9 @@ form {
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 5px;
-  display: inline-block;
+  display: block;        /* was: inline-block */
+  width: 100%;           /* let the form stretch to the container's width */
+  max-width: 700px;      /* optional: limit how wide it can grow */
   text-align: left;
 }
 
@@ -35,6 +37,8 @@ form textarea {
   border: 1px solid #ddd;
   border-radius: 3px;
   box-sizing: border-box; /* Ensures padding doesn't add to width */
+  min-height: 150px; /* Add this line to set a minimum height for the textarea */
+  resize: vertical; /* Add this line to allow vertical resizing by the user */
 }
 
 form button {
@@ -67,4 +71,21 @@ div > div > p { /* For JournalItem p */
 div > div > small { /* For JournalItem small (date) */
   font-style: italic;
   color: #555;
+}
+
+form #title {
+  width: 60%;    /* title shorter */
+  min-height: 4em;    /* Now visually two lines tall */
+  height: auto;      /* Let height adjust based on min-height and padding */
+}
+
+form #content {
+  width: 80%;    /* content medium */
+  height: 400px;    /* adjust to your preferred content height */
+}
+
+form #date {
+  width: 30%;    /* date picker smallest */
+  min-height: 4em;    /* Now visually two lines tall */
+  height: auto;      /* Let height adjust based on min-height and padding */
 }
