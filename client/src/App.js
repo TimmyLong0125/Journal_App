@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import JournalPage from './pages/JournalPage'; // Import JournalPage
+import './App.css'; // Assuming default App.css for basic styling
 
 function App() {
   return (
     <div className="App">
-      <h1>Journal App</h1>
+      <JournalPage /> {/* Render JournalPage */}
     </div>
   );
 }

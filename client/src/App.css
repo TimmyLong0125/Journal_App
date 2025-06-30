@@ -1,38 +1,91 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background-color: #f0f0f0;
+  padding: 1em 0;
+  margin-bottom: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  margin-bottom: 2em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;        /* was: inline-block */
+  width: 100%;           /* let the form stretch to the container's width */
+  max-width: 700px;      /* optional: limit how wide it can grow */
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+form div {
+  margin-bottom: 0.5em;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+form input[type="text"],
+form input[type="date"],
+form textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+  min-height: 150px; /* Add this line to set a minimum height for the textarea */
+  resize: vertical; /* Add this line to allow vertical resizing by the user */
+}
+
+form button {
+  padding: 0.7em 1.5em;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+form button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div > h2 { /* For JournalList h2 */
+  margin-top: 1em;
+}
+
+div > div > h3 { /* For JournalItem h3 */
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+div > div > p { /* For JournalItem p */
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+div > div > small { /* For JournalItem small (date) */
+  font-style: italic;
+  color: #555;
+}
+
+form #title {
+  width: 60%;    /* title shorter */
+  min-height: 4em;    /* Now visually two lines tall */
+  height: auto;      /* Let height adjust based on min-height and padding */
+}
+
+form #content {
+  width: 80%;    /* content medium */
+  height: 400px;    /* adjust to your preferred content height */
+}
+
+form #date {
+  width: 30%;    /* date picker smallest */
+  min-height: 4em;    /* Now visually two lines tall */
+  height: auto;      /* Let height adjust based on min-height and padding */
 }
