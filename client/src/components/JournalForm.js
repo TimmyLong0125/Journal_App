@@ -9,7 +9,6 @@ function JournalForm({ onSaveEntry }) { // Receive onSaveEntry prop
     event.preventDefault(); // Prevent page reload
 
     const newEntry = {
-      id: Date.now(), // Temporary unique ID
       title,
       content,
       date,

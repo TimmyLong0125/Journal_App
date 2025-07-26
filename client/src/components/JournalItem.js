@@ -1,11 +1,14 @@
 import React from 'react';
 
-function JournalItem({ title, content, date }) {
+function JournalItem({ entry, onDeleteEntry }) {
   return (
-    <div>
-      <h3>{title}</h3>
-      <p>{content}</p>
-      <small>{date}</small>
+    <div className="journal-item">
+      <h3>{entry.title}</h3>
+      <p>{entry.content}</p>
+      <small>Created on: {new Date(entry.createdAt).toLocaleDateString()}</small>
+      <button onClick={() => onDeleteEntry(entry._id)} className="delete-button">
+        Delete
+      </button>
     </div>
   );
 }
