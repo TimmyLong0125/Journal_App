@@ -89,3 +89,42 @@ form #date {
   min-height: 4em;    /* Now visually two lines tall */
   height: auto;      /* Let height adjust based on min-height and padding */
 }
+
+.analysis-box {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.chip {
+  padding: 3px 8px;
+  border-radius: 15px;
+  font-size: 0.8em;
+}
+
+.emotion-chip {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.topic-chip {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.sentiment-chip {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.insights-list {
+  margin-top: 10px;
+}
